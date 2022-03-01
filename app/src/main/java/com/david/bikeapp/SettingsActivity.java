@@ -45,21 +45,17 @@ public class SettingsActivity extends AppCompatActivity {
     }
 
     public void loadSettings() {
-        if (!myCyclist.getId().equals(String.valueOf(MyApplication.DEFAULT_VALUE))) {
+        if (!myCyclist.getId().equals(String.valueOf(MyApplication.DEFAULT_VALUE)))
             id.setText(myCyclist.getId());
-        }
 
-        if (!myCyclist.getEmail().equals(String.valueOf(MyApplication.DEFAULT_VALUE))) {
+        if (!myCyclist.getEmail().equals(String.valueOf(MyApplication.DEFAULT_VALUE)))
             email.setText(myCyclist.getEmail());
-        }
 
-        if (!myCyclist.getName().equals(String.valueOf(MyApplication.DEFAULT_VALUE))) {
+        if (!myCyclist.getName().equals(String.valueOf(MyApplication.DEFAULT_VALUE)))
             name.setText(myCyclist.getName());
-        }
 
-        if (myCyclist.getAge() != MyApplication.DEFAULT_VALUE) {
+        if (myCyclist.getAge() != MyApplication.DEFAULT_VALUE)
             age.setText(String.valueOf(myCyclist.getAge()));
-        }
 
         if (myCyclist.getGender() == MyApplication.DEFAULT_VALUE) {
             male.setChecked(false);
@@ -76,17 +72,14 @@ public class SettingsActivity extends AppCompatActivity {
     }
 
     public void onClickSave(View view) {
-        if (!email.getText().toString().equals("")) {
+        if (!email.getText().toString().equals(""))
             myCyclist.setEmail(email.getText().toString());
-        }
 
-        if (!name.getText().toString().equals("")) {
+        if (!name.getText().toString().equals(""))
             myCyclist.setName(name.getText().toString());
-        }
 
-        if (!age.getText().toString().equals("")) {
+        if (!age.getText().toString().equals(""))
             myCyclist.setAge(Integer.parseInt(age.getText().toString()));
-        }
 
         if (male.isChecked()) {
             myCyclist.setGender(MyApplication.MALE_CODE);
