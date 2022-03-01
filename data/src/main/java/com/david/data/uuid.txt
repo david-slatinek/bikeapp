@@ -1,4 +1,0 @@
-UUID potrebujemo za iskanje po zbirkah, bazah, za brisanje, za posodabljanje ...
-Če ključ vnese uporabnik, tvegamo, da bo vnesel že obstoječ ključ.
-Če ključ generiramo sami, lahko poskrbimo, da generiramo resnično naključen UUID
-in v določenem formatu.

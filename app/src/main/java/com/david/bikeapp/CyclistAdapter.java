@@ -4,24 +4,18 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.david.data.Cyclist;
 import com.david.data.Tour;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.time.format.DateTimeFormatter;
-import java.time.format.FormatStyle;
 
 public class CyclistAdapter extends RecyclerView.Adapter<CyclistAdapter.ViewHolder> {
-    private MyApplication cyclist;
-    private OnItemClickListener listener;
+    private final MyApplication cyclist;
+    private final OnItemClickListener listener;
 
     public CyclistAdapter(MyApplication cyclist, OnItemClickListener listener) {
         this.cyclist = cyclist;
