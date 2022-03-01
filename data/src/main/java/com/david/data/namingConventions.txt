@@ -1,0 +1,29 @@
+Pisanje razredov:
+    Imena razredov pišemo z veliko začetnico, nato pa po principu dvozačetnice (camel case),
+    vsaka začetnica nove besede je z veliko črko. Po besedni vrsti imena razredov spadajo pod samostalnike.
+    Primer:
+        class Bike
+        class MyAwesomeClass
+        class AmazingClass
+
+Pisanje lastnosti:
+     Imena razredov pišemo z malo začetnico, nato pa po principu dvozačetnice (camel case),
+     vsaka začetnica nove besede je z veliko črko.
+     Primer:
+        int     age;
+        String  nameAndLastName;
+        double  weight;
+
+Pisanje konstant:
+    Konstante morajo biti razrednega tipa. Vse črke morajo biti z veliko začetnico, ločene z podčrtajem.
+    Primer:
+        static final int    MIN_AGE = 15;
+        static final char   FIRST_LETTER = 'a';
+
+Pisanje metod:
+     Imena razredov pišemo z malo začetnico, nato pa po principu dvozačetnice (camel case),
+     vsaka začetnica nove besede je z veliko črko. Po besedni vrsti imena razredov spadajo pod glagole.
+     Primer:
+        performDance();
+        end();
+        saveToFile();

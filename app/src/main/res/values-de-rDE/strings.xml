@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FahrradApp</string>
+    <string name="info">Info</string>
+    <string name="exit">Beenden</string>
+    <string name="create_tour">Tour erstellen</string>
+    <string name="bike">Fahrrad</string>
+    <string name="e_bike">E-Bike</string>
+    <string name="back">Zurück</string>
+    <string name="author_david_slatinek">Autor: David Slatinek</string>
+    <string name="view_github_account">Github-Konto anzeigen</string>
+    <string name="git">Git</string>
+    <string name="read_qr_code">QR-Code lesen</string>
+    <string name="pick_end_time">Endzeit wählen</string>
+    <string name="pick_end_date">Enddatum wählen</string>
+    <string name="pick_start_time">Startzeit wählen</string>
+    <string name="pick_start_date">Startdatum wählen</string>
+    <string name="your_name">Ihr Name</string>
+    <string name="your_lastname">Ihr Nachname</string>
+    <string name="create_cyclist">Radfahrer anlegen</string>
+    <string name="tour_length">Länge der Tour (km):</string>
+    <string name="tour_description">Turm Beschreibung</string>
+    <string name="view_results"><data><![CDATA[<a href="https://bit.ly/3ruf3mu">Tour de France Ergebnisse ansehen</a>]]> </data></string>
+    <string name="last_name">Geben Sie Ihren Nachnamen an!</string>
+    <string name="created">"Radfahrer erstellt: "</string>
+    <string name="select_start_date">Starttermin wählen!</string>
+    <string name="select_end_date">Enddatum wählen!</string>
+    <string name="select_start_time">Startzeit wählen!</string>
+    <string name="select_end_time">Endzeitpunkt wählen!</string>
+    <string name="enter_tour_desc">Tourbeschreibung eingeben!</string>
+    <string name="cannot_zero">Die Tourlänge kann nicht Null sein!</string>
+    <string name="error_try_again">Fehler, bitte versuchen Sie es erneut.</string>
+    <string name="invalid_scan">Ungültiger Scan!</string>
+    <string name="received_value">"Empfangener Wert: "</string>
+    <string name="tour_added">Tour hinzugefügt</string>
+    <string name="nr_tours">"Anzahl der Touren: "</string>
+    <string name="firstly">Erstens müssen Sie einen Radfahrer erstellen!</string>
+    <string name="enter_name">Geben Sie Ihren Namen ein!</string>
+    <string name="view_settings">Einstellungen</string>
+    <string name="app_id">App ID:</string>
+    <string name="gender">Geschlecht</string>
+    <string name="male">Male</string>
+    <string name="female">Frau</string>
+    <string name="your_age">Alter</string>
+    <string name="save">Speichern</string>
+    <string name="settings_saved">Einstellungen wurden gespeichert</string>
+    <string name="delete_settings">Einstellungen löschen</string>
+    <string name="settings_deleted">Einstellungen wurden gelöscht!</string>
+    <string name="update_cy">AKTUALISIERUNG RADFAHRER</string>
+    <string name="update_name_surname">Aktualisiert Radfahrer:</string>
+    <string name="view_tours">Touren ansehen</string>
+    <string name="delete_conf">Sind Sie sicher, dass Sie die Tour löschen wollen?</string>
+    <string name="yes">Ja</string>
+    <string name="no">Nein</string>
+    <string name="tour_updated">Tour aktualisiert</string>
+    <string name="update_tour">Update Tour</string>
+</resources>

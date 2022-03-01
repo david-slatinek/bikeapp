@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Kolesarstvo</string>
+    <string name="info">Info</string>
+    <string name="exit">Izhod</string>
+    <string name="create_tour">Ustvari turo</string>
+    <string name="bike">Kolo</string>
+    <string name="e_bike">E-kolo</string>
+    <string name="back">Nazaj</string>
+    <string name="author_david_slatinek">Avtor: David Slatinek</string>
+    <string name="view_github_account">Poglej Github račun</string>
+    <string name="git">Git</string>
+    <string name="read_qr_code">Preberi QR kodo</string>
+    <string name="pick_end_time">Izberi končni čas</string>
+    <string name="pick_end_date">Izberi končni datum</string>
+    <string name="pick_start_time">Izberi začetni čas</string>
+    <string name="pick_start_date">Izberi začetni datum</string>
+    <string name="your_name">Tvoje ime</string>
+    <string name="your_lastname">Tvoj priimek</string>
+    <string name="create_cyclist">Ustvari kolesarja</string>
+    <string name="tour_length">Dolžina ture (km):</string>
+    <string name="tour_description">Opis ture</string>
+    <string name="view_results"><data><![CDATA[<a href="https://bit.ly/3ruf3mu">Poglej rezultate na Tour de France</a>]]> </data></string>
+    <string name="last_name">Vnesite priimek!</string>
+    <string name="created">"Kolesar ustvarjen: "</string>
+    <string name="select_start_date">Izberite začetni datum!</string>
+    <string name="select_end_date">Izberite končni datum!</string>
+    <string name="select_start_time">Izberite začetni čas!</string>
+    <string name="select_end_time">Izberite končni čas!</string>
+    <string name="enter_tour_desc">Vnesite opis ture!</string>
+    <string name="cannot_zero">Dolžina ture ne more biti 0!</string>
+    <string name="error_try_again">Napaka, prosimo poskusite ponovno.</string>
+    <string name="invalid_scan">Neveljavno skeniranje!</string>
+    <string name="received_value">"Prejeta vrednost: "</string>
+    <string name="tour_added">Tura dodana</string>
+    <string name="nr_tours">"Število tur: "</string>
+    <string name="firstly">Najprej ustvari kolesarja!</string>
+    <string name="enter_name">Vnesite ime!</string>
+    <string name="view_settings">Nastavitve</string>
+    <string name="app_id">ID aplikacije:</string>
+    <string name="gender">Spol</string>
+    <string name="male">Moški</string>
+    <string name="female">Ženski</string>
+    <string name="your_age">Starost</string>
+    <string name="save">Shrani</string>
+    <string name="settings_saved">Nastavitve so bile shranjene!</string>
+    <string name="delete_settings">Izbriši nastavitve</string>
+    <string name="settings_deleted">Nastavitve so bile izbrisane!</string>
+    <string name="update_cy">POSODOBI KOLESARJA</string>
+    <string name="update_name_surname">Posodobil kolesarja:</string>
+    <string name="view_tours">Poglej toure</string>
+    <string name="delete_conf">Ste prepričani, da želite izbrisati turo?</string>
+    <string name="yes">Da</string>
+    <string name="no">No</string>
+    <string name="tour_updated">Tura je bila posodobljena</string>
+    <string name="update_tour">Posodobi turo</string>
+</resources>

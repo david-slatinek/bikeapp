@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">BikeApp</string>
+    <string name="info">Info</string>
+    <string name="exit">Exit</string>
+    <string name="create_tour">Create tour</string>
+    <string name="bike">Bike</string>
+    <string name="e_bike">E-bike</string>
+    <string name="back">Back</string>
+    <string name="author_david_slatinek">Author: David Slatinek</string>
+    <string name="view_github_account">View Github account</string>
+    <string name="git">Git</string>
+    <string name="read_qr_code">Read QR code</string>
+    <string name="pick_end_time">Pick end time</string>
+    <string name="pick_end_date">Pick end date</string>
+    <string name="pick_start_time">Pick start time</string>
+    <string name="pick_start_date">Pick start date</string>
+    <string name="your_name">Your name</string>
+    <string name="your_lastname">Your lastname</string>
+    <string name="create_cyclist">Create cyclist</string>
+    <string name="tour_length">Tour length (km):</string>
+    <string name="tour_description">Tour description</string>
+    <string name="km" translatable="false">km</string>
+    <string name="view_results"><data><![CDATA[<a href="https://bit.ly/3ruf3mu">View Tour de France results</a>]]> </data></string>
+    <string name="last_name">Enter your lastname!</string>
+    <string name="created">Cyclist created: </string>
+    <string name="select_start_date">Select start date!</string>
+    <string name="select_end_date">Select end date!</string>
+    <string name="select_start_time">Select start time!</string>
+    <string name="select_end_time">Select end time!</string>
+    <string name="enter_tour_desc">Enter tour description!</string>
+    <string name="cannot_zero">Tour length cannot be zero!</string>
+    <string name="error_try_again">Error, please try again.</string>
+    <string name="invalid_scan">Invalid scan!</string>
+    <string name="received_value">Received value: </string>
+    <string name="tour_added">Tour added</string>
+    <string name="nr_tours">Number of tours: </string>
+    <string name="firstly">Firstly, you must create a cyclist!</string>
+    <string name="enter_name">Enter your name!</string>
+    <string name="view_settings">Settings</string>
+    <string name="app_id">App ID:</string>
+    <string name="e_mail" translatable="false">E-mail</string>
+    <string name="gender">Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="your_age">Your age</string>
+    <string name="save">Save</string>
+    <string name="settings_saved">Settings were saved!</string>
+    <string name="delete_settings">Delete settings</string>
+    <string name="settings_deleted">Settings were deleted!</string>
+    <string name="update_cy">UPDATE CYCLIST</string>
+    <string name="update_name_surname">Updated cyclist:</string>
+    <string name="view_tours">View tours</string>
+    <string name="delete_conf">Are you sure you want to delete tour?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="tour_updated">Tour updated</string>
+    <string name="update_tour">Update tour</string>
+</resources>

@@ -1,0 +1,91 @@
+package com.david.bikeapp;
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.david.data.Cyclist;
+import com.david.data.Tour;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
+
+public class CyclistAdapter extends RecyclerView.Adapter<CyclistAdapter.ViewHolder> {
+    private MyApplication cyclist;
+    private OnItemClickListener listener;
+
+    public CyclistAdapter(MyApplication cyclist, OnItemClickListener listener) {
+        this.cyclist = cyclist;
+        this.listener = listener;
+    }
+
+    @NonNull
+    @Override
+    public CyclistAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        Context context = parent.getContext();
+        LayoutInflater inflater = LayoutInflater.from(context);
+        View view = inflater.inflate(R.layout.rv_rowlayout, parent, false);
+        return new ViewHolder(view);
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull CyclistAdapter.ViewHolder holder, int position) {
+        Tour tour = cyclist.getCyclist().getTourAtPos(position);
+        holder.tvStart.setText(DateTimeFormatter.ofPattern("dd. MM. yyyy HH:mm").format(tour.getStartPoint().getDateAndTime()));
+        holder.tvEnd.setText(DateTimeFormatter.ofPattern("dd. MM. yyyy HH:mm").format(tour.getEndPoint().getDateAndTime()));
+        holder.tvRowLength.setText(tour.getLength() + " km");
+        holder.tvRowDesc.setText(tour.getDescription());
+    }
+
+    @Override
+    public int getItemCount() {
+        return cyclist.getCyclist().size();
+    }
+
+    public class ViewHolder extends RecyclerView.ViewHolder {
+        public TextView tvStart, tvEnd, tvRowLength, tvRowDesc;
+
+        public ViewHolder(@NonNull View itemView) {
+            super(itemView);
+
+            tvStart = itemView.findViewById(R.id.tvStart);
+            tvEnd = itemView.findViewById(R.id.tvEnd);
+            tvRowLength = itemView.findViewById(R.id.tvRowLength);
+            tvRowDesc = itemView.findViewById(R.id.tvRowDesc);
+
+            itemView.setOnLongClickListener(v -> {
+                if (listener != null) {
+                    int position = getAdapterPosition();
+                    if (position != RecyclerView.NO_POSITION) {
+                        listener.onItemLongClick(itemView, position);
+                    }
+                }
+                return false;
+            });
+
+            itemView.setOnClickListener(v -> {
+                if (listener != null) {
+                    int position = getAdapterPosition();
+                    if (position != RecyclerView.NO_POSITION) {
+                        listener.onItemClick(itemView, position);
+                    }
+                }
+            });
+        }
+    }
+
+    public interface OnItemClickListener {
+        void onItemClick(View itemView, int position);
+
+        void onItemLongClick(View itemView, int position);
+    }
+}
