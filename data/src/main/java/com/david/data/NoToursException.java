@@ -1,8 +1,8 @@
 package com.david.data;
 
 public class NoToursException extends Exception {
-    private String name;
-    private String surname;
+    private final String name;
+    private final String surname;
 
     /**
      * Constructor. Sets cyclist name and surname.
@@ -16,11 +16,6 @@ public class NoToursException extends Exception {
         this.surname = surname;
     }
 
-    /**
-     * Overrides Exception method toString.
-     *
-     * @return Exception description.
-     */
     @Override
     public String toString() {
         return "No tours for cyclist " + name + " " + surname + ".";

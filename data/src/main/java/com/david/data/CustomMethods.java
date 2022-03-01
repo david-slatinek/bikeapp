@@ -1,6 +1,8 @@
 package com.david.data;
 
 public class CustomMethods {
+    private static final String alphabet = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+
     /**
      * Generates random int number.
      *
@@ -31,11 +33,8 @@ public class CustomMethods {
      */
     public static String getRandomString(int length) {
         char[] array = new char[CustomMethods.randomNumber(0, length)];
-        final String alfabet = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-
-        for (int i = 0; i < array.length; i++) {
-            array[i] = alfabet.charAt(CustomMethods.randomNumber(0, alfabet.length() - 1));
-        }
+        for (int i = 0; i < array.length; i++)
+            array[i] = CustomMethods.alphabet.charAt(CustomMethods.randomNumber(0, CustomMethods.alphabet.length() - 1));
         return new String(array);
     }
 

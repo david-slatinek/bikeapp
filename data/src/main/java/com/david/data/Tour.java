@@ -7,12 +7,11 @@ import java.util.UUID;
  * Tour class.
  */
 public class Tour implements Comparable<Tour>, Serializable {
-    private String id;
+    private final String id;
     private Point startPoint;
     private Point endPoint;
     private double length;
     private String description;
-
 
     /**
      * Constructor. Sets all object variables.
@@ -78,11 +77,6 @@ public class Tour implements Comparable<Tour>, Serializable {
         return Double.compare(length, tour.length);
     }
 
-    /**
-     * Overrides Object method toString.
-     *
-     * @return Object attributes.
-     */
     @Override
     public String toString() {
         return "Start point: " + startPoint +

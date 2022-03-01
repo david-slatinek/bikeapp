@@ -7,8 +7,8 @@ import java.time.LocalDateTime;
 import java.util.UUID;
 
 public class Point implements Comparable<Point>, Serializable {
-    private String id;
-    private LocalDateTime dateAndTime;
+    private final String id;
+    private final LocalDateTime dateAndTime;
 
     public Point(LocalDateTime dateAndTime) {
         id = UUID.randomUUID().toString().replace("-", "");
@@ -41,10 +41,6 @@ public class Point implements Comparable<Point>, Serializable {
 
     public LocalDateTime getDateAndTime() {
         return dateAndTime;
-    }
-
-    public void setDateAndTime(LocalDateTime dateAndTime) {
-        this.dateAndTime = dateAndTime;
     }
 
     @Override
