@@ -29,9 +29,7 @@ public class MainActivity extends AppCompatActivity {
         TextView tvHtml = findViewById(R.id.tvHtml);
         settings = findViewById(R.id.buttonSettings);
 
-        settings.setOnClickListener(v -> {
-            startActivity(new Intent(getBaseContext(), SettingsActivity.class));
-        });
+        settings.setOnClickListener(v -> startActivity(new Intent(getBaseContext(), SettingsActivity.class)));
 
         String welcomeStr = getString(R.string.view_results);
         tvHtml.setText(Html.fromHtml(welcomeStr, Html.FROM_HTML_MODE_COMPACT));
@@ -40,13 +38,14 @@ public class MainActivity extends AppCompatActivity {
         myCyclist = (MyApplication) getApplication();
         myCyclist.incrementActivity(MyApplication.MAIN);
 
-        if (myCyclist.getCyclist().size() < 100) {
-            for (int i = 0; i < 100; i++) {
-                myCyclist.getCyclist().addTour(Tour.getRandomTour());
+        if (myCyclist.getCyclist() != null) {
+            if (myCyclist.getCyclist().size() < 100) {
+                for (int i = 0; i < 100; i++) {
+                    myCyclist.getCyclist().addTour(Tour.getRandomTour());
+                }
             }
+            myCyclist.saveToFile();
         }
-
-        myCyclist.saveToFile();
     }
 
     public void onClickExit(View view) {

@@ -42,7 +42,7 @@ public class CyclistAdapter extends RecyclerView.Adapter<CyclistAdapter.ViewHold
 
     @Override
     public int getItemCount() {
-        return cyclist.getCyclist().size();
+        return cyclist.getCyclist() == null ? 0 : cyclist.getCyclist().size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
