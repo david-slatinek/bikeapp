@@ -37,5 +37,4 @@ public class CustomMethods {
             array[i] = CustomMethods.alphabet.charAt(CustomMethods.randomNumber(0, CustomMethods.alphabet.length() - 1));
         return new String(array);
     }
-
 }

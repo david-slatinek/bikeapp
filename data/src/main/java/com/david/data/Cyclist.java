@@ -2,7 +2,6 @@ package com.david.data;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.UUID;
 
 /**
@@ -12,7 +11,7 @@ public class Cyclist implements Sizable, Serializable {
     private final String id;
     private String name;
     private String surname;
-    private ArrayList<Tour> tours = new ArrayList<>();
+    private final ArrayList<Tour> tours = new ArrayList<>();
 
     /**
      * Constructor. Sets name and surname.
@@ -47,25 +46,7 @@ public class Cyclist implements Sizable, Serializable {
     }
 
     public void addTour(Tour tour) {
-        tours.add(tour);
-    }
-
-    /**
-     * Sorts tours by tour length.
-     */
-    public void sortTours() {
-        Collections.sort(tours);
-    }
-
-    /**
-     * Returns tours for iteration.
-     *
-     * @return Tours.
-     * @throws NoToursException If there is no tours.
-     */
-    public ArrayList<Tour> getTours() throws NoToursException {
-        if (size() == 0) throw new NoToursException(getName(), getSurname());
-        return tours;
+        tours.add(0, tour);
     }
 
     @Override
@@ -84,26 +65,6 @@ public class Cyclist implements Sizable, Serializable {
     }
 
     /**
-     * Gets tour with max length.
-     *
-     * @return Tour with max length.
-     */
-    public Tour getMaxTour() {
-        return Collections.max(tours);
-    }
-
-    /**
-     * Gets tour with min length.
-     *
-     * @return Tour with min length.
-     * @throws NoToursException If there is no tours.
-     */
-    public Tour getMinTour() throws NoToursException {
-        if (tours.size() == 0) throw new NoToursException(getName(), getSurname());
-        return Collections.min(tours);
-    }
-
-    /**
      * Generates n random tours.
      *
      * @param n How many tours to generate.
@@ -119,17 +80,7 @@ public class Cyclist implements Sizable, Serializable {
         return list;
     }
 
-    /**
-     * Sets Tours list.
-     *
-     * @param tours Tours to set.
-     */
-    public void setTours(ArrayList<Tour> tours) {
-        this.tours = tours;
-    }
-
-    /**
-     * Gets tour at index 'position'.
+     /** Gets tour at index 'position'.
      * @param position Index value.
      * @return Tour at index.
      */

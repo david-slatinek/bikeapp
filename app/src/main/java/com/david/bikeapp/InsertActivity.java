@@ -10,7 +10,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.VibrationEffect;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
@@ -48,7 +47,6 @@ public class InsertActivity extends AppCompatActivity implements DatePickerDialo
     public static final int DATA_UPDATED = 1;
 
 
-    private static final String TAG = InsertActivity.class.getSimpleName();
     private int formMode = FORM_MODE_INSERT;
     private EditText name, lastName;
     private TextView startDate, endDate;
