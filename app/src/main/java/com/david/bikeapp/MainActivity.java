@@ -26,14 +26,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        TextView tvHtml = findViewById(R.id.tvHtml);
         settings = findViewById(R.id.buttonSettings);
 
         settings.setOnClickListener(v -> startActivity(new Intent(getBaseContext(), SettingsActivity.class)));
-
-        String welcomeStr = getString(R.string.view_results);
-        tvHtml.setText(Html.fromHtml(welcomeStr, Html.FROM_HTML_MODE_COMPACT));
-        tvHtml.setMovementMethod(LinkMovementMethod.getInstance());
 
         myCyclist = (MyApplication) getApplication();
         myCyclist.incrementActivity(MyApplication.MAIN);

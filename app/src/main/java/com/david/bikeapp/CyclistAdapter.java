@@ -59,9 +59,8 @@ public class CyclistAdapter extends RecyclerView.Adapter<CyclistAdapter.ViewHold
             itemView.setOnLongClickListener(v -> {
                 if (listener != null) {
                     int position = getAdapterPosition();
-                    if (position != RecyclerView.NO_POSITION) {
+                    if (position != RecyclerView.NO_POSITION)
                         listener.onItemLongClick(itemView, position);
-                    }
                 }
                 return false;
             });

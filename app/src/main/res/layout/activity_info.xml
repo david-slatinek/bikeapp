@@ -42,7 +42,7 @@
         android:backgroundTint="#0f9141"
         android:onClick="onClickGithub"
         android:text="@string/view_github_account"
-        android:textColor="@android:color/black"
+        android:textColor="#000000"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

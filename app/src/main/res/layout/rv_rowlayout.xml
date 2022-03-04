@@ -12,7 +12,8 @@
         android:layout_height="72dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_bike" />
+        app:srcCompat="@drawable/ic_bike"
+        android:contentDescription="TODO" />
 
     <TextView
         android:id="@+id/tvStart"
