@@ -6,20 +6,15 @@
 </div>
 
 Cycling app to store tours. Supported options:
-  <ul>
-    <li>Cyclist creation</li>
-    <li>Adding tours and relevant information about them, e. g. tour length, description ...</li>
-    <li>Adding tour via QR code</li>
-    <li>Tour view, update and deletion</li>
-  </ul>
+  - Cyclist creation
+  - Adding tour and relevant information about them, e. g. tour length, description...
+  - Adding tour via QR code
+  - Tour view, update, and deletion
   
 Supported languages:
-  <ul>
-    <li>English</li>
-    <li>Slovene</li>
-    <li>German</li>
-  </ul>
-<br>
+- English
+- Slovene
+- German
 
 # Images
 <div align="center">
