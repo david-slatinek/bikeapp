@@ -29,6 +29,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.Calendar;
+import java.util.Locale;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -89,9 +90,8 @@ public class InsertActivity extends AppCompatActivity implements DatePickerDialo
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             formMode = extras.getInt(FORM_MODE_ID);
-            if (formMode == FORM_MODE_UPDATE) {
+            if (formMode == FORM_MODE_UPDATE)
                 id = extras.getInt("ID");
-            }
         }
 
         if (formMode == FORM_MODE_UPDATE) {
@@ -154,12 +154,12 @@ public class InsertActivity extends AppCompatActivity implements DatePickerDialo
             myCyclist.getCyclist().setSurname(lastName.getText().toString());
 
             clearFocus(view);
-            Toast.makeText(this, getString(R.string.update_name_surname) + " " + myCyclist.getCyclist().getName() + " " + myCyclist.getCyclist().getSurname(), Toast.LENGTH_SHORT).show();
+            displayToast(getString(R.string.update_name_surname) + " " + myCyclist.getCyclist().getName() + " " + myCyclist.getCyclist().getSurname());
         } else {
             myCyclist.setCyclist(name.getText().toString(), lastName.getText().toString());
 
             clearFocus(view);
-            Toast.makeText(this, String.format("Cyclist %s created!", myCyclist.getCyclist().getName()), Toast.LENGTH_SHORT).show();
+            displayToast(String.format("Cyclist %s created!", myCyclist.getCyclist().getName()));
         }
     }
 
@@ -333,11 +333,10 @@ public class InsertActivity extends AppCompatActivity implements DatePickerDialo
             startTime.setText(start_time.toString());
             endTime.setText(end_time.toString());
             textViewDescription.setText(description);
-            textViewLength.setText(Double.toString(length));
+            textViewLength.setText(String.format(Locale.getDefault(), "%f", length));
         } catch (JSONException e) {
             displayToast("Invalid format!");
             vibrateOnError();
-            Log.e(TAG, e.toString());
         }
     }
 
