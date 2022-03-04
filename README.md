@@ -20,3 +20,10 @@ Supported languages:
     <li>German</li>
   </ul>
 <br>
+
+# Images
+<div align="center">
+  <img alt="Main screen" src="images/image-1.jpg" width="280"/>
+  <img alt="Tours" src="images/image-3.jpg" width="380"/>
+  <img alt="Creating a tour" src="images/image-2.jpg" height="700"/>
+</div>
