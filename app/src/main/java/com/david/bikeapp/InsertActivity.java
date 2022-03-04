@@ -152,13 +152,11 @@ public class InsertActivity extends AppCompatActivity implements DatePickerDialo
         if (myCyclist.getCyclist() != null) {
             myCyclist.getCyclist().setName(name.getText().toString());
             myCyclist.getCyclist().setSurname(lastName.getText().toString());
-            Log.i(TAG, getString(R.string.update_name_surname) + " " + myCyclist.getCyclist().getName() + " " + myCyclist.getCyclist().getSurname());
 
             clearFocus(view);
             Toast.makeText(this, getString(R.string.update_name_surname) + " " + myCyclist.getCyclist().getName() + " " + myCyclist.getCyclist().getSurname(), Toast.LENGTH_SHORT).show();
         } else {
             myCyclist.setCyclist(name.getText().toString(), lastName.getText().toString());
-            Log.i(TAG, getString(R.string.created) + myCyclist.getCyclist());
 
             clearFocus(view);
             Toast.makeText(this, String.format("Cyclist %s created!", myCyclist.getCyclist().getName()), Toast.LENGTH_SHORT).show();
@@ -166,7 +164,7 @@ public class InsertActivity extends AppCompatActivity implements DatePickerDialo
     }
 
     public void onCreateTour(View view) {
-        if (myCyclist == null) {
+        if (myCyclist.getCyclist() == null) {
             displayToast(getString(R.string.firstly));
             return;
         }
@@ -207,7 +205,6 @@ public class InsertActivity extends AppCompatActivity implements DatePickerDialo
             }
             description = textViewDescription.getText().toString();
 
-
             if (formMode == FORM_MODE_UPDATE) {
                 Tour tour = myCyclist.getCyclist().getTourAtPos(id);
 
@@ -229,8 +226,6 @@ public class InsertActivity extends AppCompatActivity implements DatePickerDialo
             finish();
         } catch (Exception e) {
             displayToast(getString(R.string.error_try_again));
-            e.printStackTrace();
-            Log.e(TAG, e.toString());
         }
     }
 

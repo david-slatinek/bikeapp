@@ -9,8 +9,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.david.data.Tour;
-
 public class MainActivity extends AppCompatActivity {
     private MyApplication myCyclist;
     public Button settings;
@@ -25,14 +23,6 @@ public class MainActivity extends AppCompatActivity {
 
         myCyclist = (MyApplication) getApplication();
         myCyclist.incrementActivity(MyApplication.MAIN);
-
-        if (myCyclist.getCyclist() != null) {
-            if (myCyclist.getCyclist().size() < 100) {
-                for (int i = 0; i < 100; i++)
-                    myCyclist.getCyclist().addTour(Tour.getRandomTour());
-            }
-            myCyclist.saveToFile();
-        }
     }
 
     public void onClickExit(View view) {

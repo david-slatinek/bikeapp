@@ -12,7 +12,6 @@ import android.widget.Toast;
 public class SettingsActivity extends AppCompatActivity {
     private MyApplication myCyclist;
 
-    private TextView id;
     private EditText email, name, age;
     private RadioButton male, female;
 
@@ -24,7 +23,6 @@ public class SettingsActivity extends AppCompatActivity {
         myCyclist = (MyApplication) getApplication();
         myCyclist.incrementActivity(MyApplication.SETTINGS);
 
-        id = findViewById(R.id.tvAppID);
         email = findViewById(R.id.editEmail);
         name = findViewById(R.id.editSettingsName);
         age = findViewById(R.id.editAge);
@@ -45,9 +43,6 @@ public class SettingsActivity extends AppCompatActivity {
     }
 
     public void loadSettings() {
-        if (!myCyclist.getId().equals(String.valueOf(MyApplication.DEFAULT_VALUE)))
-            id.setText(myCyclist.getId());
-
         if (!myCyclist.getEmail().equals(String.valueOf(MyApplication.DEFAULT_VALUE)))
             email.setText(myCyclist.getEmail());
 
