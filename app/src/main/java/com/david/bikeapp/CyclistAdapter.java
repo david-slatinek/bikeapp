@@ -1,6 +1,5 @@
 package com.david.bikeapp;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,8 +24,7 @@ public class CyclistAdapter extends RecyclerView.Adapter<CyclistAdapter.ViewHold
     @NonNull
     @Override
     public CyclistAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        Context context = parent.getContext();
-        LayoutInflater inflater = LayoutInflater.from(context);
+        LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         View view = inflater.inflate(R.layout.rv_rowlayout, parent, false);
         return new ViewHolder(view);
     }
@@ -68,9 +66,8 @@ public class CyclistAdapter extends RecyclerView.Adapter<CyclistAdapter.ViewHold
             itemView.setOnClickListener(v -> {
                 if (listener != null) {
                     int position = getAdapterPosition();
-                    if (position != RecyclerView.NO_POSITION) {
+                    if (position != RecyclerView.NO_POSITION)
                         listener.onItemClick(itemView, position);
-                    }
                 }
             });
         }

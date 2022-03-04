@@ -5,21 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Html;
-import android.text.method.LinkMovementMethod;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.david.data.Tour;
 
 public class MainActivity extends AppCompatActivity {
-    public static final int ACTIVITY_ID = 100;
-    private static final String TAG = MainActivity.class.getSimpleName();
     private MyApplication myCyclist;
-
     public Button settings;
 
     @Override
@@ -35,9 +28,8 @@ public class MainActivity extends AppCompatActivity {
 
         if (myCyclist.getCyclist() != null) {
             if (myCyclist.getCyclist().size() < 100) {
-                for (int i = 0; i < 100; i++) {
+                for (int i = 0; i < 100; i++)
                     myCyclist.getCyclist().addTour(Tour.getRandomTour());
-                }
             }
             myCyclist.saveToFile();
         }
@@ -74,10 +66,6 @@ public class MainActivity extends AppCompatActivity {
 
         if (requestCode == InsertActivity.ACTIVITY_ID) {
             if (resultCode == RESULT_OK) {
-                Log.i(TAG, getString(R.string.received_value) + data.getExtras().get(InsertActivity.DATA_ACTION));
-
-                Log.i(TAG, getString(R.string.nr_tours) + myCyclist.getCyclist().size());
-
                 displayToast(getString(R.string.tour_added) + "!");
                 displayToast(getString(R.string.nr_tours) + " " + myCyclist.getCyclist().size());
             }

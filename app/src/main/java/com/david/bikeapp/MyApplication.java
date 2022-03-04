@@ -73,7 +73,6 @@ public class MyApplication extends Application {
             editor.putString(ID, id);
             editor.apply();
         }
-
         readFromFile();
     }
 
@@ -112,9 +111,8 @@ public class MyApplication extends Application {
     }
 
     private File getFile() {
-        if (file == null) {
+        if (file == null)
             file = new File(getFilesDir(), MY_FILE_NAME);
-        }
         return file;
     }
 

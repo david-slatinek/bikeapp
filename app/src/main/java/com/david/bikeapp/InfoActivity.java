@@ -8,8 +8,6 @@ import android.os.Bundle;
 import android.view.View;
 
 public class InfoActivity extends AppCompatActivity {
-    public static final int ACTIVITY_ID = 101;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
